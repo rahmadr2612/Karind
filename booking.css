@@ -1,0 +1,580 @@
+/* Booking Page Specific Styles */
+
+.booking-page {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 50%, #1a1a1a 100%);
+}
+
+/* Hero Section */
+.booking-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a1a1a 50%, #1a1a1a 100%);
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(229, 62, 62, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(66, 153, 225, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(229, 62, 62, 0.2) 0%, transparent 50%);
+    animation: backgroundPulse 8s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+}
+
+.hero-title .highlight {
+    background: linear-gradient(135deg, #e53e3e, #4299e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* Search and Filter Section */
+.search-filter {
+    padding: 3rem 0;
+    background-color: rgba(45, 45, 45, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.search-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.artist-search-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.artist-search-input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.artist-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.artist-search-input:focus {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.2);
+}
+
+.search-artist-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-artist-btn:hover {
+    background: linear-gradient(135deg, #c53030, #e53e3e);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(229, 62, 62, 0.3);
+}
+
+.filter-section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+    border-color: #e53e3e;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.reset-filter-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #e53e3e;
+    border: 1px solid #e53e3e;
+    border-radius: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-filter-btn:hover {
+    background-color: #e53e3e;
+    color: #ffffff;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Top Artists Section */
+.top-artists {
+    padding: 4rem 0;
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.artist-card {
+    background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.artist-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(229, 62, 62, 0.05) 0%, rgba(66, 153, 225, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.artist-card:hover::before {
+    opacity: 1;
+}
+
+.artist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(229, 62, 62, 0.3);
+}
+
+.artist-card.featured {
+    border: 2px solid #e53e3e;
+    background: linear-gradient(145deg, #3d2d2d, #2a1a1a);
+}
+
+.artist-image {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.artist-avatar {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #e53e3e, #4299e1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.artist-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #000;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 3;
+}
+
+.artist-info {
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.artist-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.artist-genre {
+    color: #e53e3e;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.artist-location {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.artist-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.stars {
+    font-size: 1rem;
+}
+
+.rating-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.artist-price {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.artist-price strong {
+    color: #e53e3e;
+    font-size: 1.1rem;
+}
+
+.artist-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 2;
+}
+
+.book-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+    color: #ffffff;
+}
+
+.book-btn.primary {
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #000;
+}
+
+.book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(229, 62, 62, 0.3);
+}
+
+.view-profile-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-profile-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #e53e3e;
+}
+
+/* Artist List Section */
+.artist-list {
+    padding: 4rem 0;
+    background-color: rgba(45, 45, 45, 0.3);
+}
+
+.list-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sort-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.view-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-btn.active,
+.view-btn:hover {
+    background-color: #e53e3e;
+    border-color: #e53e3e;
+}
+
+.artists-list-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.artist-list-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.artist-list-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(229, 62, 62, 0.3);
+}
+
+.artist-list-image {
+    flex-shrink: 0;
+}
+
+.artist-list-image .artist-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+}
+
+.artist-list-info {
+    flex: 1;
+}
+
+.artist-list-info .artist-name {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+
+.artist-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(229, 62, 62, 0.2);
+    color: #e53e3e;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.artist-list-price {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e53e3e;
+    margin-bottom: 0.25rem;
+}
+
+.price-note {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.load-more {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.load-more-btn {
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #e53e3e;
+    border: 2px solid #e53e3e;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #e53e3e;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .artist-search-container {
+        flex-direction: column;
+    }
+    
+    .filter-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-select {
+        min-width: auto;
+    }
+    
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .list-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    .artist-list-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .artist-list-price {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-hero {
+        min-height: 50vh;
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .search-filter {
+        padding: 2rem 0;
+    }
+    
+    .artist-card {
+        padding: 1.5rem;
+    }
+    
+    .artist-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .artist-list-item {
+        padding: 1.5rem;
+    }
+}
+
